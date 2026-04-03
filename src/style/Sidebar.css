@@ -7,10 +7,20 @@
   position: sticky;
   top: 0;
 
-  
+  display: flex;
+  flex-direction: column;
 }
 
+/* Logo */
 .logo {
+  margin-bottom: 30px;
+}
+
+/* Top section */
+.sidebar-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin-bottom: 30px;
 }
 
@@ -18,7 +28,7 @@
 .sidebar ul {
   list-style: none;
   padding: 0;
- 
+  flex: 1; /* 🔥 push footer down */
 }
 
 .sidebar li {
@@ -31,7 +41,7 @@
   gap: 10px;
   text-decoration: none;
   color: #ccc;
-  font-size: 15px;
+  font-size: 20px;
   padding: 10px;
   border-radius: 8px;
   transition: 0.3s;
@@ -51,15 +61,7 @@
 
 /* Icon */
 .icon {
-  font-size: 18px;
-}
-
-/* Top section */
-.sidebar-top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 30px;
+  font-size: 25px;
 }
 
 /* Theme button */
@@ -70,11 +72,120 @@
   border-radius: 50%;
   cursor: pointer;
   color: white;
-  font-size: 16px;
+  font-size: 20px;
 }
 
+/* 🔥 Footer (company logo section) */
+.sidebar-footer {
+  text-align: center;
+  padding: 15px 10px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
 
+.company-logo {
+  width: 45px;
+  height: 45px;
+  object-fit: contain;
+  margin-bottom: 6px;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.05);
+  padding: 5px;
+}
 
+.company-name {
+  font-size: 20px;
+  color: #9fb3d9;
+}
+
+/* Dark mode */
 .dark .sidebar {
   background: #1c1b1b;
+}
+
+/* 🔥 RESPONSIVE (Mobile = Bottom Navbar) */
+@media (max-width: 768px) {
+
+  .sidebar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 65px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    z-index: 1000;
+  }
+
+  .sidebar-top,
+  .sidebar-footer {
+    display: none;
+  }
+
+  .sidebar ul {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    padding: 0;
+  }
+
+  .sidebar li {
+    margin: 0;
+  }
+
+  .sidebar a {
+    flex-direction: column;
+    font-size: 20px;
+  }
+
+  .icon {
+    font-size: 20px;
+  }
+}
+
+/* 🔥 MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+
+  .sidebar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 65px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 10px;
+    z-index: 1000;
+  }
+
+  /* Top & Footer hide */
+  .sidebar-top,
+  .sidebar-footer {
+    display: none;
+  }
+
+  /* Menu horizontal */
+  .sidebar ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+  }
+
+  .sidebar li {
+    margin: 0;
+  }
+
+  /* Links vertical (icon + text) */
+  .sidebar a {
+    flex-direction: column;
+    font-size: 11px;
+    padding: 5px;
+  }
+
+  .icon {
+    font-size: 18px;
+  }
 }

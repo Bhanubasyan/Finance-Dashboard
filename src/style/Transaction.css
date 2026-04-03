@@ -118,7 +118,7 @@
   border-radius: 8px;
   border: none;
   cursor: pointer;
-  font-size: 13px;
+  font-size: 20px;
   background: linear-gradient(135deg, #4dabf7, #339af0);
   color: white;
   transition: 0.3s;
@@ -272,14 +272,14 @@ tbody tr:hover {
   color: #333;
   padding: 4px 10px;
   border-radius: 20px;
-  font-size: 12px;
+  font-size: 17px;
 }
 
 /* Type badge */
 .type {
   padding: 4px 10px;
   border-radius: 20px;
-  font-size: 12px;
+  font-size: 15px;
   font-weight: 500;
 }
 
