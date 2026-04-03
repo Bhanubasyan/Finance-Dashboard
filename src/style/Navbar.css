@@ -1,0 +1,58 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 25px;
+  background: white;
+  border-bottom: 1px solid #eee;
+  color: black;
+}
+
+/* Left */
+.nav-left h2 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.nav-left p {
+  margin: 2px 0 0;
+  font-size: 13px;
+  color: gray;
+}
+
+/* Right */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Dropdown */
+.role-select {
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+/* Profile */
+.profile img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+
+.navbar {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.dark .navbar {
+  background: #1E1E2C;
+  color: white;
+}

@@ -1,0 +1,80 @@
+.sidebar {
+  width: 230px;
+  height: 100vh;
+  background: #1E1E2C;
+  color: white;
+  padding: 20px;
+  position: sticky;
+  top: 0;
+
+  
+}
+
+.logo {
+  margin-bottom: 30px;
+}
+
+/* Menu */
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+ 
+}
+
+.sidebar li {
+  margin: 15px 0;
+}
+
+.sidebar a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: #ccc;
+  font-size: 15px;
+  padding: 10px;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+/* Hover */
+.sidebar a:hover {
+  background: #2c2c3e;
+  color: white;
+}
+
+/* Active */
+.active a {
+  background: #F29F67;
+  color: white;
+}
+
+/* Icon */
+.icon {
+  font-size: 18px;
+}
+
+/* Top section */
+.sidebar-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+/* Theme button */
+.theme-btn {
+  background: #2c2c3e;
+  border: none;
+  padding: 8px;
+  border-radius: 50%;
+  cursor: pointer;
+  color: white;
+  font-size: 16px;
+}
+
+
+
+.dark .sidebar {
+  background: #1c1b1b;
+}
